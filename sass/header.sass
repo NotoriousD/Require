@@ -1,0 +1,753 @@
+@import "bourbon"
+@import "vars"
+@import "fonts"
+
+
+.shake
+  animation-name: shake
+  animation-timing-function: ease
+  animation-duration: .4s
+
+
+@include keyframes(shake)
+  from
+    transform: translateX(0px)
+  
+  20%,60%
+    transform: translateX(-10px)
+  
+  40%,80%
+    transform: translateX(10px)
+  
+  to
+    transform: translateX(0px)
+  
+
+
+@if $adaptive == true 
+  @media (max-width: 1366px)
+    .top-line .search
+      margin-left: 0
+    
+  
+  @media (max-width: 1280px)
+    .header__top-line .top-mnu li
+      padding: 16px 8px
+    
+    .header__top-line .search
+      margin-left: 0
+    
+    .toggle-mobm
+      display: none
+    
+    .c-modus .browser-center
+      left: 28%
+    
+    .c-bot-slider .prev
+      right: 130px
+    
+    .c-bot-slider .next
+      right: 80px
+    
+  
+  @media (max-width: 768px)
+    .toggle-mobm
+      display: inline-block
+    
+    .c-header .header__top-line
+      background-repeat: no-repeat
+    
+    .toggle-mobm
+      position: absolute
+      background-color: $red
+      border: 0
+      font-size: 24px
+      color: #fff
+      left: 0
+      top: 20px
+    
+    .c-header .top-line__logo-text
+      text-align: center
+    
+    .c-header .top-mnu
+      background-color: $blue
+      width: 100%
+      display: none
+    
+    .c-header .top-mnu li
+      display: block
+      text-align: center
+    
+    .c-header .search
+      display: none
+    
+    .top-mnu .toggle-mnu
+      left: -30px
+      top: 36px
+      padding: 0
+    
+    .c-modus .browser-center
+      left: 13%
+    
+    .c-modus .browser-left
+      left: 0
+    
+    .c-modus .browser-right
+      right: 0
+    
+    .c-choose .center-img
+      text-align: center
+      margin-bottom: 15px
+    
+     body .c-bot-slider h2
+      width: 21%
+    
+    .c-bot-slider .bot-line
+      width: 55%
+    
+    .c-bot-slider .next
+      right: 20px
+    
+    .c-bot-slider .prev
+      right: 80px
+    
+    body .c-footer
+      background-repeat: no-repeat
+      background-color: $blue
+
+    
+  
+  @media (max-width: 480px)
+    .c-modus img
+      width: 50%
+    
+    .c-header .header__inner
+      width: 100%
+      padding: 0 15px
+    
+    .header__top-slider .top-slider h1
+      font-size: 40px
+      text-align: center
+    
+    .header__top-slider .top-slider p
+      width: 230px
+      font-size: 15px
+    
+    .c-modus .browser-center
+      top: 275px
+      left: 25%
+    
+    .c-bot-slider .bot-line
+      display: none
+    
+    body .c-bot-slider h2
+      width: 50%
+    
+    body .c-choose
+      padding: 0
+    
+    body .c-choose p
+      margin-top: 20px
+    
+    body .c-choose .descr2-text
+      text-align: center
+    
+  
+
+
+body
+  background-color: #f3f3f3
+
+
+.header__top-line
+  background-image: url(/img/header-bg.png)
+
+
+.top-line__logo-text
+  display: block
+  font-size: 30px
+  font-weight: 700
+  color: #fff
+  text-transform: uppercase
+  padding: 19px 5px
+
+
+.header__inner
+  padding: 0 140px
+
+
+.top-line__logo-text span
+  font-size: 25px
+  font-weight: 400
+  text-transform: none
+
+
+.top-mnu
+  padding: 22px 0
+  margin: 0
+  display: inline-block
+
+
+.top-mnu li
+  display: inline-block
+  text-transform: uppercase
+  font-size: 13px
+  font-weight: 600
+  padding: 17px 18px
+  color: #fff
+  height: 30px
+  line-height: 2px
+  position: relative
+
+
+.top-mnu li a
+  color: #fff
+
+
+.top-mnu li i.fa-check
+  font-size: 10px
+  margin-right: 3px
+  opacity: 0
+
+
+.active-check
+  color: #fff
+
+
+.top-mnu li.active
+  background-color: #62a29e
+  border-radius: 5px
+  border-bottom: 2px solid #528b86
+
+
+.active-li
+  background-color: $red
+  border-radius: 5px
+  border-bottom: 2px solid #e3524a
+
+
+.toggle-mnu
+  position: absolute
+  display: none
+  left: 5px
+  top: 47px
+  width: 200px
+  height: 110px
+  border-radius: 5px
+  background-color: #e3524a
+  padding: 7px 0px
+  text-align: center
+
+
+.toggle-mnu:before
+  content: ''
+  position: absolute
+  display: block
+  width: 0
+  height: 0
+  border-left: 8px solid transparent
+  border-right: 8px solid transparent
+  border-bottom: 10px solid #e3524a
+  left: 11px
+  top: -5px
+
+
+.toggle-mnu a
+  color: #fff
+  font-size: 13px
+  font-weight: 600
+  text-transform: none
+  display: inline-block 
+  margin-left: 12px 
+
+
+.toggle-mnu li
+    background-color: $red
+    border-radius: 5px
+    padding: 8px 12px
+    margin-bottom: 3px
+    width: 95%
+
+
+.top-mnu .btn-mnu .hover-check
+    opacity: 1
+ 
+
+.btn-mnu
+  position: relative
+
+
+.btn-mnu:before
+  content: ''
+  position: absolute
+  width: 8px
+  height: 5px
+  background-image: url('/img/barrow.png')
+  left: 6px
+  top: 15px
+  display: inline-block
+
+
+.toggle-mnu li:hover
+  background-color: #77c8c1
+
+
+.search
+  background-color: transparent
+  border: 0
+  color: #fff
+  margin-left: 44px
+
+
+.top-slider h1
+  font-size: 50px
+  background-color: #e3524a
+  font-weight: 700
+  color: #fff
+  text-transform: uppercase
+  padding: 5px 12px
+  border-radius: 5px
+  width: 345px
+  line-height: 35px
+  margin: 0 auto
+  margin-bottom: 15px
+
+
+.top-slider p
+  width: 470px
+  border-radius: 5px
+  color: #fff
+  text-align: center
+  font-size: 16px
+  background-color: #3f4646
+  padding: 15px 38px
+  margin: 0 auto
+
+
+.top-slider li
+  background-color: #7f8c8c
+  padding: 160px 0
+
+
+.lSSlideOuter .lSAction>a
+  background-image: url('/img/leftarrow.png')
+  background-repeat: no-repeat
+  background-position: center center
+  width: 50px
+  height: 57px
+  border-radius: 5px
+  background-color: $red
+  opacity: 1
+  top: 52%
+
+
+.lSSlideOuter .lSAction>.lSPrev
+  left: 0
+
+
+.lSSlideOuter .lSAction>.lSNext
+  transform: rotate(180deg)
+  right: 0
+
+
+.header__top-slider .lSSlideOuter .lSPager.lSpg>li a
+  width: 60px
+  height: 5px
+  background-color: #b0b8b9
+
+
+.header__top-slider .lSSlideOuter .lSPager.lSpg>li.active
+  a
+    background-color: $red
+  
+
+
+.header__top-slider .lSSlideOuter .lSPager.lSpg>li a:hover
+  background-color: $red
+
+
+.lSPager
+  margin-top: 56px !important
+
+
+.c-view
+  margin-top: 20px
+
+
+.bg-dark
+  background-color: #ececec
+  border-radius: 5px
+  padding: 17px 0
+
+
+.c-view p
+  font-size: 13px
+  color: #777
+  padding-left: 25px
+
+
+.c-view a
+  width: 200px
+  height: 50px
+  border-radius: 5px
+  background-color: $red
+  display: block
+  color: #fff
+  text-align: center
+  line-height: 50px
+  text-transform: uppercase
+  font-size: 20px
+  margin: 0 auto
+  margin-top: 5px
+
+
+.c-view h2
+  font-size: 31px
+  color: #7f8c8c
+  padding-left: 25px
+
+
+.first-service
+  padding: 55px 0
+
+
+.o-service
+  padding: 55px 0
+
+
+.c-service
+  margin-bottom: 10px
+
+
+.c-service h2
+  font-size: 17px
+  font-weight: 700
+  text-align: center
+  color: #7f8c8c
+  text-transform: uppercase
+  margin-bottom: 23px
+
+
+
+.first-service .service__container
+  background-color: #fff
+
+
+.o-service .service__container
+  background-color: #f9f8f9
+
+
+.service__container
+  width: 270px
+  border-radius: 5px
+  padding: 33px 0
+  margin: 0 auto
+  height: 310px
+  border-bottom: 3px solid #e6e7e7
+  position: relative
+
+
+.service__container a
+  display: block
+  width: 200px
+  height: 55px
+  border-radius: 5px
+  background-color: #62bdbd
+  border-bottom: 3px solid #62bebe
+  color: #fff
+  text-align: center
+  line-height: 55px
+  position: absolute
+  bottom: -27px
+  left: 35px
+
+
+.service__container a:hover
+  background-color: $red
+  border-bottom: 3px solid $red
+
+
+.c-service p
+  font-size: 13px
+  color: #777
+  text-align: center
+  width: 80%
+  margin: 0 auto
+
+
+.first-service span
+  color: #e2534e
+  font-size: 60px
+  display: block
+  text-align: center
+
+
+.o-service span
+  font-size: 60px
+  text-align: center
+  display: block
+  color: $blue
+
+
+.c-modus
+  background-image: url("/img/modus-bg.png")
+  background-repeat: no-repeat
+  position: relative
+  padding: 43px 0
+  padding-bottom: 260px
+
+
+.c-modus p
+  font-size: 13px
+  text-align: center
+  color: #777
+
+
+.c-modus h1
+  color: #e1524b
+  font-size: 40px
+  text-align: center
+  text-transform: uppercase
+  margin-bottom: 0
+
+
+.browser-center
+  left: 463px
+  top: 207px
+  z-index: 100
+
+
+.browser-right
+  right: 167px
+  top: 266px
+
+
+.browser-left
+  top: 266px
+  left: 163px
+
+.c-modus img
+  position: absolute
+
+
+.c-choose
+  padding-top: 217px
+
+
+.c-choose h2
+  font-size: 16px
+  color: #7f8c8c
+  margin-bottom: 30px
+
+
+.c-choose p
+  color: #777
+  font-size: 13px
+
+
+.c-choose p span
+  color: #e1524b
+  text-decoration: underline
+
+
+.chooseus li .fa-arrow-right
+  font-size: 12px
+  color: #e2514a
+  margin-left: 5px
+
+
+.chooseus li
+  margin-top: 3px
+
+
+.chooseus li span
+  font-size: 13px
+  color: #777
+
+
+.center-img
+  padding-top: 63px
+
+
+.center-img li
+  display: inline-block
+  padding: 0 7px
+
+
+.center-img li h3
+  font-size: 16px
+  color: #777
+  text-transform: uppercase
+  font-weight: 700
+  text-align: center
+  margin-top: 20px
+
+
+.c-choose .descr2-text
+  margin-bottom: 20px
+
+
+.c-choose blockquote
+  font-size: 13px
+  font-style: italic
+  background-color: #fff
+  border-radius: 5px
+  padding: 16px
+
+
+.c-choose .quote-name
+  font-size: 16px
+  color: #777
+  margin-top: 6px
+  text-indent: 66px
+
+
+
+.c-bot-slider
+  padding-top: 60px
+  position: relative
+
+
+.c-bot-slider h2
+  font-size: 16px
+  color: #777
+  width: 14%
+  font-weight: 700
+  text-indent: 15px
+  display: inline-block
+
+
+.bot-line
+  display: inline-block
+  background-image: url('/img/line.png')
+  height: 7px
+  width: 73%
+  vertical-align: text-top
+
+
+.c-bot-slider .lSSlideOuter
+  margin-top: 50px
+
+
+.c-bot-slider button
+  width: 40px
+  height: 40px
+  background-color: #99a4a4
+  color: #fff
+  border: 0
+  border-radius: 5px
+  position: absolute
+
+
+.prev
+  right: 227px
+  top: 51px
+
+
+.next
+  right: 168px
+  top: 51px
+
+
+
+.c-bot-slider button:hover
+  background-color: #e3524a
+
+
+.c-footer
+  background-image: url('/img/f-bg.png')
+  margin-top: 50px
+  padding: 25px 0
+
+
+.c-footer p
+  font-size: 13px
+  color: #fff
+
+
+.c-footer p span
+  font-size: 20px
+  font-weight: 600
+  margin-left: 12px
+
+
+.about-descr
+  font-size: 13px
+  color: #fff
+  margin-bottom: 33px
+
+
+.c-footer h2
+  font-size: 20px
+  color: #000
+  font-weight: 700
+  margin-top: 20px
+  margin-bottom: 30px
+
+
+.c-footer ul
+  padding-left: 15px
+
+
+.c-footer ul li
+  color: #fff
+  a
+    color: #fff
+  
+
+
+.c-footer ul li i
+  margin-right: 5px
+
+
+.footer-info .info-r
+  display: inline-block
+
+
+.c-footer .from-blog
+  font-size: 20px
+  margin-top: 20px
+  margin-bottom: 25px
+  font-style: italic
+
+
+.from-blog span
+  font-weight: 700
+  font-style: sans-serif
+
+
+.info-r
+  display: inline-block
+  width: 79%
+  padding-left: 15px
+
+
+.footer-info img
+  vertical-align: top
+  margin-bottom: 20px
+
+
+.footer__bot-line
+  background-color: #6ab3ad
+  padding: 12px 0
+  p
+    font-size: 12px
+    color: #fff
+    width: 85%
+    display: inline-block
+    text-indent: 15px
+  
+  ul
+    display: inline-block
+    li
+      display: inline-block
+      padding: 0 10px
+      a
+        color: #fff
+        font-size: 22px
+      
+    
+  
+
+
+
