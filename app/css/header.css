@@ -443,7 +443,7 @@ body {
   color: #76c7c0; }
 
 .c-modus {
-  background-image: url("img/modus-bg.png");
+  background-image: url("/app/img/modus-bg.png");
   background-repeat: no-repeat;
   position: relative;
   padding: 43px 0;
@@ -551,7 +551,7 @@ body {
 
 .bot-line {
   display: inline-block;
-  background-image: url("img/line.png");
+  background-image: url("/app/img/line.png");
   height: 7px;
   width: 73%;
   vertical-align: text-top; }
@@ -581,7 +581,7 @@ body {
   background-color: #e3524a; }
 
 .c-footer {
-  background-image: url("img/f-bg.png");
+  background-image: url("/app/img/f-bg.png");
   margin-top: 50px;
   padding: 25px 0; }
 
